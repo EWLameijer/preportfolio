@@ -1,8 +1,11 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 
+interface Message { sender: string, contents: string}
+
 const App = () => {
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState<Message|null>(null);
+    // in JavaScript: const [message, setMessage] = useState({});, and no Message interface needed
 
     useEffect(() => {
         fetch(`http://localhost:8080/api/v1/message`)
@@ -12,7 +15,7 @@ const App = () => {
     }, []);
 
 
-    return <p>{message !== "" ? `The message for you is: "${message}".` : "Your message is being loaded..."}</p>
+    return <p>{message !== null ? `Message from ${message.sender}: "${message.contents}"` : "Your message is being loaded..."}</p>
 }
 
 export default App;

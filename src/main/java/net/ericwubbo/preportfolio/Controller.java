@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 @RequestMapping("/api/v1")
 public class Controller {
+    record Message(String sender, String contents) {}
 
     @GetMapping("message")
-    public String getMessage() {
-        return "Writing your own first full-stack project is tricky!";
+    public Message getMessage() {
+        return new Message("Wubbo", "Writing your own first full-stack project is tricky!");
     }
 }
