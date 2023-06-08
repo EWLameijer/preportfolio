@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
     @GetMapping("message")
-    public String getMessage() {
-        return "Writing your own first full-stack project is tricky!";
+    public Message getMessage() {
+        var message = new Message("Wubbo", "Writing your own first full-stack project is tricky!");
+        return message;
     }
 }

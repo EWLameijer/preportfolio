@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+/front-end/preportfolio/.vite/deps_temp_728dc453/package.json
+/front-end/preportfolio/node_modules/*
