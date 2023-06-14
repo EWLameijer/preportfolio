@@ -1,5 +1,8 @@
 package net.ericwubbo.preportfolio;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Message {
     private String sender;
 
