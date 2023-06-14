@@ -1,9 +1,13 @@
 package net.ericwubbo.preportfolio;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class Message {
+    @Id
+    Long id;
+
     private String sender;
 
     private String contents;
