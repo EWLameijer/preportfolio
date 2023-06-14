@@ -8,6 +8,8 @@ public class Message {
     @Id
     Long id;
 
+    private Message() {} // for Spring DI
+
     private String sender;
 
     private String contents;
