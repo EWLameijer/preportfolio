@@ -1,14 +1,17 @@
 package net.ericwubbo.preportfolio;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
 public class Message {
     @Id
+    @GeneratedValue
     Long id;
 
-    private Message() {} // for Spring DI
+    private Message() {
+    } // for Spring DI
 
     private String sender;
 

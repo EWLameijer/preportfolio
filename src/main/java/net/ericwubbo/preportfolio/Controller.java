@@ -22,7 +22,7 @@ public class Controller {
 
     @GetMapping("seed")
     public void seedMessage() {
-        var message = new Message("Winston Churchill", "Writing your own fourth full-stack project is still tricky!");
+        var message = new Message("Johan Cruijff", "Zonder een doel ken je niet scoren.");
         messageRepository.save(message);
     }
 }
