@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import MessageInput from './MessageInput';
 
 const App = () => {
     const [message, setMessage] = useState({});
-    
+
     useEffect(() => {
         fetch(`http://localhost:8080/api/v1/message`)
             .then(response => response.json())
@@ -10,7 +11,10 @@ const App = () => {
             .catch(err => console.log(`An error has occurred: ${err.message}.`))
     }, []);
 
-    return <p>{message !== null ? `Message from ${message.sender}: "${message.contents}"` : "Your message is being loaded..."}</p>
+    return <>
+      <p>{message !== null ? `Message from ${message.sender}: "${message.contents}"` : "Your message is being loaded..."}</p>
+      <MessageInput/>
+    </>
 }
 
 export default App
