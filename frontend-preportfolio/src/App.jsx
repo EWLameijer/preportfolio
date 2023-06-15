@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import MessageInput from './MessageInput';
 
 const App = () => {
-    const [message, setMessage] = useState({});
+    const [message, setMessage] = useState(null);
 
     useEffect(() => {
         fetch(`http://localhost:8080/api/v1/message`)
